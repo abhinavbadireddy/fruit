@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Ex</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="fruit">
+        <form class="fnc">
+            <input type="text" id="fn" name="fn" class="fname input" value="" placeholder="Enter fruit name..."/>
+
+            <input type="text" id="fc" name="fc" value="" class="input" placeholder="Enter fruit colour..."/>
+
+            <input class="db" type="button" value="Show Data" onclick="show()"></button>
+
+            <button class="sfn" type="submit">Show fruit names</button>
+        </form>
+    </div>
+
+    <div class="result">
+        <div id="display">
+        </div>
+    
+        <div class="fruit_name">
+            <ul class="fn_list"></ul>
+        </div>
+    </div>
+
+    <script>
+
+        const fnInput = document.querySelector(".fname");
+        const fnButton = document.querySelector(".sfn");
+        const fnList = document.querySelector(".fn_list");
+
+        fnButton.addEventListener("click", show_fn);
+
+        function show_fn(event) {
+            event.preventDefault();
+            const fnDIV = document.createElement("div");
+            fnDIV.classList.add("f_name");
+            const newFn = document.createElement("li");
+            newFn.innerText = fnInput.value;
+            newFn.classList.add("fname-item");
+            fnDIV.appendChild(newFn);
+            fnList.appendChild(fnDIV);
+            fnInput.value = "";
+        }
+
+        var arrFruits=new Array();
+        var arrColours=new Array();
+        
+        function show(){
+            var fruit = document.getElementById('fn').value;
+            var colour = document.getElementById('fc').value;
+            arrFruits[arrFruits.length]=fruit;
+            arrColours[arrColours.length]=colour;    
+
+            var content="<b>Data Entered :</b><br>";
+            content+= [...arrFruits]+"</br>";
+            content+=[...arrColours]+"</br>";
+        
+            document.getElementById('display').innerHTML = content;
+        }
+    </script>
+</body>
+</html>

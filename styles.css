@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121316;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fruit {
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    padding: 50px;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.fnc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    margin-bottom: 20px;
+    background-color: rgb(234, 201, 151);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 15px;
+    color: rgb(74, 57, 31);
+}
+
+.db {
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 15px;
+    color: rgb(74, 57, 31);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sfn {
+    background-color: #121316;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.result {
+    margin: auto;
+    display: flex;
+}
+
+.fruit_name {
+    margin: auto;
+    display: flex;
+}
+
+.fn_list {
+    margin: auto;
+    margin-top: 50px;
+    color: bisque;
+}
+
+.fname-item {
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#display {
+    text-align: center;
+    margin: auto;
+    color: rgb(192, 225, 192);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
